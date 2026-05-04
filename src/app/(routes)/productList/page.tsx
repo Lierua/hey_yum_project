@@ -1,4 +1,4 @@
-import Nav from "@/app/components/utilityComponents/Nav";
+import Nav from "@/app/components/utilityComponents/Header/Nav";
 
 export default function Products() {
   return (

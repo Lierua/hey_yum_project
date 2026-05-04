@@ -7,12 +7,52 @@
   --orange: #ff672d;
   --yellow: #f2b604;
   --green: #00944e;
+  --light_green: #9dcd67;
   --blue: #0592c1;
+
+  --std_rounded: 10px;
+  --card_rounded: 25px;
 }
 
 body {
   background: var(--white);
   color: var(--black);
   font-family: Arial, Helvetica, sans-serif;
-  color: var(--black);
+  p {
+    font-size: 16px;
+  }
+  h1 {
+    font-size: clamp(2rem, 1.5385rem + 2.0513vw, 4rem);
+    font-weight: 600;
+  }
+  h2 {
+    font-size: clamp(1.5rem, 1.1538rem + 1.5385vw, 3rem);
+    font-weight: 600;
+  }
+  h3 {
+    font-size: clamp(1rem, 0.9423rem + 0.2564vw, 1.25rem);
+    font-weight: 500;
+  }
+}
+
+.fullbleed {
+  width: 100%;
+}
+
+.Content_witdh {
+  display: grid;
+  grid-template-columns: max(1fr, 1rem) minmax(0, 1600px) max(1fr, 1rem);
+}
+
+.S_Content_width {
+  display: grid;
+  grid-template-columns: max(1fr, 1rem) minmax(0, 1440px) max(1fr, 1rem);
+}
+
+.Textbox_width {
+  max-width: 600px;
+}
+
+.Card_width {
+  width: 400px;
 }
