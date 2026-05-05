@@ -9,6 +9,7 @@
   --green: #00944e;
   --light_green: #9dcd67;
   --blue: #0592c1;
+  --magenta: #f90f60;
 
   --std_rounded: 10px;
   --card_rounded: 25px;
@@ -81,4 +82,7 @@ body {
 }
 .scroll-reveal.visible .stagger-3 {
   transition-delay: 0.3s;
+}
+.title_text {
+  font-size: clamp(3.125rem, 2.4038rem + 3.2051vw, 9.25rem);
 }
