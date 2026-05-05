@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import ButtonLink from "../utilityComponents/ButtonLink";
+import LinkButton from "../utilityComponents/LinkButton";
 import Image from "next/image";
 
 const Hero = () => {
@@ -129,7 +129,7 @@ const Herocard = ({ name, text, link, color, bgColor, pack }: CardProps) => {
           {name}
         </h1>
         <div className="mx-auto mb-8 mt-auto scale-120 z-20">
-          <ButtonLink color={color} text={text} link={link ?? ""} />
+          <LinkButton color={color} text={text} link={link ?? ""} />
         </div>
       </div>
       <Image

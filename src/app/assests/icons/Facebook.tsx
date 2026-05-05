@@ -16,7 +16,7 @@ export default function Facebook({ className, ...props }: Props) {
       <path
         d="M23.9961 1.5C36.4272 1.5 46.4932 11.5287 46.4932 23.8848C46.4931 36.2408 36.4271 46.2695 23.9961 46.2695C11.5652 46.2693 1.50008 36.2406 1.5 23.8848C1.5 11.5288 11.5652 1.50021 23.9961 1.5Z"
         stroke="currentColor"
-        stroke-width="3"
+        strokeWidth="3"
       />
     </svg>
   );

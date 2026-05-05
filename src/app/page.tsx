@@ -3,6 +3,7 @@ import Nav from "./components/utilityComponents/Header/Nav";
 import FunctionSection from "./components/functionComponents/FunctionSection";
 import Hero from "./components/homeComponents/Hero";
 import SocialContent from "./components/homeComponents/Socials/SocialContent";
+import Footer from "./components/utilityComponents/Footer";
 
 export default function Home() {
   return (
@@ -14,6 +15,8 @@ export default function Home() {
         <FunctionSection />
         <SocialContent />
       </main>
+
+      <Footer />
     </div>
   );
 }
