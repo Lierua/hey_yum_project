@@ -8,7 +8,7 @@ type Props = {
 
 const Nav = ({ page }: Props) => {
   return (
-    <div className="grid  border-b-2 border-(--black50) w-full">
+    <div className="grid  border-b-3 border-(--black50) w-full">
       <nav className="flex gap-[20] mx-auto sticky h-[60] [&>*]:my-auto">
         <Link href={"/"}>
           <p
@@ -43,10 +43,6 @@ const Nav = ({ page }: Props) => {
           </p>
         </Link>
       </nav>
-      <p className="font-normal">Normal (400)</p>
-      <p className="font-medium">Medium (500)</p>
-      <p className="font-semibold">Semibold (600)</p>
-      <p className="font-bold">Bold (700)</p>
     </div>
   );
 };
