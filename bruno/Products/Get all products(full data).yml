@@ -1,0 +1,26 @@
+info:
+  name: Get all products(full data)
+  type: http
+  seq: 1
+
+http:
+  method: GET
+  url: https://towbvljdqlfyzhysgbtd.supabase.co/rest/v1/products?select=*,product_tags(tags(name)),product_ingredients(ingredients(name)),product_nutrition(*)
+  headers:
+    - name: apikey
+      value: sb_publishable_hQLCA1gMNkb9AcWu9-IHcA_WylH6nPP
+    - name: Authorization
+      value: Bearer sb_publishable_hQLCA1gMNkb9AcWu9-IHcA_WylH6nPP
+    - name: Content-Type
+      value: application/json
+  params:
+    - name: select
+      value: "*,product_tags(tags(name)),product_ingredients(ingredients(name)),product_nutrition(*)"
+      type: query
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
