@@ -26,7 +26,7 @@ const Nav = ({ page }: Props) => {
             Products
           </p>
         </Link>
-        <Link href={"/aboutUs"}>
+        <Link href={"/aboutus"}>
           <p
             className={` hover:scale-110 transition-all duration-100 ease-in
             ${page === "aboutUs" && "font-semibold"} `}

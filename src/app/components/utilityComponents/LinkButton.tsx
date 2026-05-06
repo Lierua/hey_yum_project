@@ -16,7 +16,7 @@ type Props = {
   color: Colors;
 };
 
-const ButtonLink = ({ text, link, color }: Props) => {
+const LinkButton = ({ text, link, color }: Props) => {
   const colorMap: Record<Colors, Colors> = {
     "--black": "--white",
     "--white": "--black",
@@ -49,4 +49,4 @@ const ButtonLink = ({ text, link, color }: Props) => {
   );
 };
 
-export default ButtonLink;
+export default LinkButton;

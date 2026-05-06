@@ -4,7 +4,7 @@ import SubmitButton from "./SubmitButton";
 
 const Footer = () => {
   return (
-    <div className="fullbleed bg-(--black) h-[550] flex flex-col gap-[50] px-[1rem] py-[2rem] mt-8 md:grid md:grid-cols-[1fr_2fr]">
+    <div className="fullbleed bg-(--black) h-[750] flex flex-col gap-[50] px-[1rem] py-[2rem] mt-8 md:grid md:grid-cols-[1fr_2fr]">
       <div className="flex flex-col gap-[20] md:order-2">
         <p
           className="text-[24px]! text-(--white) font-bold text-center 
