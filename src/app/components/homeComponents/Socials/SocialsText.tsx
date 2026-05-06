@@ -7,7 +7,7 @@ const SocialText = () => {
       <h2>
         Follow us on instagram <br /> and Facebook
       </h2>
-      <p className="">
+      <p>
         Join Hey Yum! on Facebook and Instagram to get the latest updates,
         discover new events, and stay in the loop with everything we’re up to.
       </p>
