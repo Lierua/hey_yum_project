@@ -68,7 +68,7 @@ body {
     transform 0.8s ease;
 }
 
-.scroll-reveal.visible .reveal-item{
+.scroll-reveal.visible .reveal-item {
   opacity: 1;
   transform: translateY(0);
 }
@@ -86,3 +86,10 @@ body {
 .title_text {
   font-size: clamp(3.125rem, 2.4038rem + 3.2051vw, 9.25rem);
 }
+
+.parallax{
+  
+  animation: parallax linear both;
+  animation-timeline: view();
+  @supports not (animation-timeline: view()) {
+  animation: none;}}
