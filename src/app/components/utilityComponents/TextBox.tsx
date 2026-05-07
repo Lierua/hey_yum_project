@@ -1,17 +1,15 @@
 type TextProps = {
   tagheader?: string;
   header: string;
-  text: string;
-  children:  React.ReactNode;
+  children: React.ReactNode;
 };
 
-const TextBox = ({ tagheader, header, text ,children}: TextProps) => {
-  const normalized = text.replace(/\\n/g, "\n");
+const TextBox = ({ tagheader, header, children }: TextProps) => {
   return (
     <div className="Textbox_width flex flex-col p-4">
       <h3 className="">{tagheader}</h3>
       <h2 className="mb-2.5">{header}</h2>
-       {children}
+      {children}
     </div>
   );
 };
