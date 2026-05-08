@@ -15,12 +15,17 @@
   --card_rounded: 25px;
 }
 
+@theme inline {
+  --font-lilita: var(--font-lilita-one);
+}
+
 body {
   background: var(--white);
   color: var(--black);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-plus-jakarta);
   p {
     font-size: 16px;
+    font-weight: 600;
   }
   h1 {
     font-size: clamp(2rem, 1.5385rem + 2.0513vw, 4rem);
@@ -41,14 +46,22 @@ body {
   width: 100%;
 }
 
-.Content_witdh {
+.ContentWitdh {
   display: grid;
-  grid-template-columns: max(1fr, 1rem) minmax(0, 1600px) max(1fr, 1rem);
+  grid-template-columns: 1fr minmax(0, 1600px) 1fr;
+  & > * {
+    grid-column: 2;
+    padding: 1rem;
+  }
 }
 
 .S_Content_width {
   display: grid;
-  grid-template-columns: max(1fr, 1rem) minmax(0, 1440px) max(1fr, 1rem);
+  grid-template-columns: 1fr minmax(0, 1440px) 1fr;
+  & > * {
+    grid-column: 2;
+    padding: 1rem;
+  }
 }
 
 .Textbox_width {
@@ -88,9 +101,10 @@ body {
   font-size: clamp(3.125rem, 2.4038rem + 3.2051vw, 9.25rem);
 }
 
-.parallax{
-  
+.parallax {
   animation: parallax linear both;
   animation-timeline: view();
   @supports not (animation-timeline: view()) {
-  animation: none;}}
+    animation: none;
+  }
+}
