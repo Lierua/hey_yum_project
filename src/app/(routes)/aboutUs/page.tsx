@@ -1,11 +1,17 @@
 import AwardsSec from "@/app/components/aboutUsComponents/AwardsSec";
+import Manifesto from "@/app/components/aboutUsComponents/Manifesto";
+import MyStorySec from "@/app/components/aboutUsComponents/MyStorySec";
+import QualitySec from "@/app/components/aboutUsComponents/QualitySec";
 import Nav from "@/app/components/utilityComponents/Header/Nav";
 
 export default function Aboutus() {
   return (
-    <div className="grid">
+    <div className="grid gap-16">
       <Nav page="aboutUs" />
       <AwardsSec />
+      <Manifesto/>
+      <QualitySec/>
+      <MyStorySec/>
     </div>
   );
 }
