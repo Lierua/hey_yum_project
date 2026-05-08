@@ -28,7 +28,7 @@ const SocialLinks = ({ color, size, gap }: Props) => {
             "--socialsbtn-anti": `var(${antiColor})`,
           } as React.CSSProperties
         }
-        className="grid transition-all duration-200 ease-in
+        className="grid
         [&>*]:text-[var(--socialsbtn-color)] hover:[&>*]:text-[var(--socialsbtn-anti)]
         [&>span]:bg-[var(--socialsbtn-anti)]  hover:[&>span]:bg-[var(--socialsbtn-color)]"
       >
@@ -37,14 +37,14 @@ const SocialLinks = ({ color, size, gap }: Props) => {
             width: `${size}px`,
             height: `${size}px`,
           }}
-          className=" col-1 row-1 z-2"
+          className=" col-1 row-1 z-2 transition-all duration-200 ease-in"
         />
         <span
           style={{
-            width: `calc(${size}px - 3px)`,
-            height: `calc(${size}px - 3px)`,
+            width: `calc(${size}px - 4px)`,
+            height: `calc(${size}px - 4px)`,
           }}
-          className="col-1 row-1 z-1 rounded-full mx-auto self-center"
+          className="col-1 row-1 z-1 rounded-full mx-auto self-center transition-all duration-200 ease-in"
         ></span>
       </Link>
       <Link
@@ -55,7 +55,7 @@ const SocialLinks = ({ color, size, gap }: Props) => {
             "--socialsbtn-anti": `var(${antiColor})`,
           } as React.CSSProperties
         }
-        className="grid transition-all duration-200 ease-in
+        className="grid
         [&>*]:text-[var(--socialsbtn-color)] hover:[&>*]:text-[var(--socialsbtn-anti)]
         [&>span]:bg-[var(--socialsbtn-anti)]  hover:[&>span]:bg-[var(--socialsbtn-color)]"
       >
@@ -64,14 +64,14 @@ const SocialLinks = ({ color, size, gap }: Props) => {
             width: `${size}px`,
             height: `${size}px`,
           }}
-          className=" col-1 row-1 z-2"
+          className=" col-1 row-1 z-2 transition-all duration-200 ease-in"
         />
         <span
           style={{
-            width: `calc(${size}px - 3px)`,
-            height: `calc(${size}px - 3px)`,
+            width: `calc(${size}px - 4px)`,
+            height: `calc(${size}px - 4px)`,
           }}
-          className="col-1 row-1 z-1 rounded-full mx-auto self-center"
+          className={`col-1 row-1 z-1 rounded-full mx-auto self-center transition-all duration-200`}
         ></span>
       </Link>
     </div>

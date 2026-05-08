@@ -15,21 +15,49 @@ const FunctionSection = () => {
           <span className="w-fit flex flex-col gap-7.5">
             {/* <h1>TASTY BY NATURE</h1> */}
             <HeaderOneComp text="TASTY BY NATURE" />
-            <p className="max-w-[600px] leading-[130%] text-[2rem]!">Tasty, organic and cruelty free certified Candy to respect the environment and nature, obtained with energy produced from sources renewable</p>
+            <p className="max-w-[600px] leading-[130%] text-[2rem]!">
+              Tasty, organic and cruelty free certified Candy to respect the
+              environment and nature, obtained with energy produced from sources
+              renewable
+            </p>
           </span>
         </div>
         <Benefits />
       </div>
-      <div ref={ref} className="grid grid-cols-[1fr_1fr_1fr] gap-0 h-[550px] scroll-reveal">
-        <div className="reveal-item stagger-1">
-          <Image src="/assets/images/home/loveSpring_sowerFlower_homeenv_shot.png" fill alt="image of candy" className="object-center object-cover" />
+      <div
+        ref={ref}
+        className="grid grid-cols-[1fr_1fr_1fr] gap-0 h-[550px] scroll-reveal"
+      >
+        <div className="relative reveal-item stagger-1">
+          <Image
+            loading="eager"
+            src="/assets/images/home/loveSpring_sowerFlower_homeenv_shot.png"
+            sizes="(max-width: 768px) 100vw, 50vw"
+            fill
+            alt="image of candy"
+            className="object-center object-cover"
+          />
         </div>
 
-        <div className="reveal-item stagger-3">
-          <Image src="/assets/images/home/all_flavors_homeenv_shot.png" fill alt="image of candy" className="object-bottom object-contain " />
+        <div className="relative reveal-item stagger-3">
+          <Image
+            loading="eager"
+            src="/assets/images/home/all_flavors_homeenv_shot.png"
+            sizes="(max-width: 768px) 100vw, 50vw"
+            fill
+            alt="image of candy"
+            className="object-bottom object-contain "
+          />
         </div>
-        <div className="reveal-item stagger-1">
-          <Image src="/assets/images/home/triassicGarden_homeenv_shot.png" fill alt="image of candy" className="object-center object-cover" />
+        <div className="relative reveal-item stagger-1">
+          <Image
+            loading="eager"
+            src="/assets/images/home/triassicGarden_homeenv_shot.png"
+            sizes="(max-width: 768px) 100vw, 50vw"
+            fill
+            alt="image of candy"
+            className="object-center object-cover"
+          />
         </div>
       </div>
     </div>

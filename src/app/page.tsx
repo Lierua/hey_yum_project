@@ -13,10 +13,10 @@ export default function Home() {
       <Nav page="home" />
 
       <main className="">
-        {/*         <Hero />
+        <Hero />
         <FunctionSection />
         <ParallaxSecOne />
-        <SocialContent /> */}
+        <SocialContent />
         <Passion />
       </main>
 

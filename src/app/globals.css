@@ -15,12 +15,17 @@
   --card_rounded: 25px;
 }
 
+@theme inline {
+  --font-lilita: var(--font-lilita-one);
+}
+
 body {
   background: var(--white);
   color: var(--black);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-plus-jakarta);
   p {
     font-size: 16px;
+    font-weight: 600;
   }
   h1 {
     font-size: clamp(2rem, 1.5385rem + 2.0513vw, 4rem);
@@ -40,9 +45,15 @@ body {
   width: 100%;
 }
 
-.Content_witdh {
+.ContentWitdh {
   display: grid;
-  grid-template-columns: max(1fr, 1rem) minmax(0, 1600px) max(1fr, 1rem);
+    grid-template-columns:
+    minmax(1rem, 1fr)
+    minmax(0, 1600px)
+    minmax(1rem, 1fr);
+  & > * {
+    grid-column: 2;
+  }
 }
 
 .S_Content_width {
@@ -51,6 +62,9 @@ body {
     minmax(1rem, 1fr)
     minmax(0, 1440px)
     minmax(1rem, 1fr);
+  & > * {
+    grid-column: 2;
+  }
 }
 
 .Textbox_width {
