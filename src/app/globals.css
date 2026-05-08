@@ -47,7 +47,7 @@ body {
 
 .ContentWitdh {
   display: grid;
-    grid-template-columns:
+  grid-template-columns:
     minmax(1rem, 1fr)
     minmax(0, 1600px)
     minmax(1rem, 1fr);
