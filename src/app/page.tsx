@@ -17,7 +17,7 @@ export default function Home() {
         <FunctionSection />
         <ParallaxSecOne />
         <SocialContent />
-        <Passion />
+        <Passion page="home" />
       </main>
 
       <Footer />
