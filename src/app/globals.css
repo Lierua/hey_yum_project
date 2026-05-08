@@ -102,9 +102,25 @@ body {
 }
 
 .parallax {
+  /* align-self: stretch;
+  width: 100%;
+  object-fit: cover; */
   animation: parallax linear both;
   animation-timeline: view();
-  @supports not (animation-timeline: view()) {
+  animation-range: cover;
+}
+
+@keyframes parallax {
+  from {
+    transform: translateY(0px);
+  }
+
+  to {
+    transform: translateY(-120px);
+  }
+}
+@supports not (animation-timeline: view()) {
+  .parallax {
     animation: none;
   }
 }
