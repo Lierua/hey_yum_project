@@ -39,14 +39,18 @@ const ProductsComponent = async ({ text }: Props) => {
       <HeaderOneComp text={text} />
       <div className="gap-4 grid grid-cols-4">
         {products.map((product) => (
-          <Link key={product.id} href={`/detail/${product.id}`}>
+          <Link
+            key={product.id}
+            href={`/detail/${product.id}?id=${product.id}`}
+          >
             <div className="max-w-[400] flex flex-col gap-1">
-              <div className="relative w-full h-[500] overflow-hidden">
+              <div className="relative w-full max-h-[500] overflow-hidden">
                 <img
                   loading="eager"
                   src={product.card_imgs[0]}
                   alt={product.name}
-                  className="object-cover h-auto w-auto"
+                  className="object-cover h-auto w-auto
+                   transition-all duration-200 ease-in hover:scale-107"
                 />
               </div>
               <h2 className="text-center font-lilita">{product.name}</h2>

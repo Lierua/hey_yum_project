@@ -5,7 +5,7 @@ import TextBox from "../utilityComponents/TextBox";
 import Image from "next/image";
 import useScrollReveal from "@/app/hooks/useScrollReveal";
 
-const Passion = () => {
+const Passion = ({ page }: { page: string }) => {
   const ref = useScrollReveal();
   return (
     <div className="md:grid md:grid-cols-[1fr_minmax(0,1600px)_1fr] [&>*]:col-2">
@@ -37,7 +37,13 @@ const Passion = () => {
                     whimsical universe of gummilicious magic where everyone is
                     welcome.
                   </p>
-                  <LinkButton color="--black" link="aboutus" text="Read more" />
+                  {page === "home" && (
+                    <LinkButton
+                      color="--black"
+                      link="aboutUs"
+                      text="Read more"
+                    />
+                  )}
                 </div>
               </div>
             </TextBox>
