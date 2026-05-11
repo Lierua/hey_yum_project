@@ -40,9 +40,9 @@ const SubmitButton = ({ text, color = "--black" }: Props) => {
       }
       className="
       w-[170] font-bold text-center rounded-[5] px-4 
-      border-2 h-[40] border-[var(--btn-color)] text-[16px]
-      text-[var(--btn-anti)] bg-[var(--btn-color)] transition-all duration-200 
-      hover:bg-[var(--btn-anti)] hover:text-[var(--btn-color)] cursor-pointer"
+      border-2 h-[40] border-(--btn-color) text-[16px]
+      text-(--btn-anti) bg-(--btn-color) transition-all duration-200 
+      hover:bg-(--btn-anti) hover:text-(--btn-color) cursor-pointer"
     >
       {text}
     </button>

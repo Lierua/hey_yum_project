@@ -15,7 +15,7 @@ const FunctionSection = () => {
           <span className="w-fit flex flex-col gap-7.5">
             {/* <h1>TASTY BY NATURE</h1> */}
             <HeaderOneComp text="TASTY BY NATURE" />
-            <p className="max-w-[600px] leading-[130%] text-[2rem]!">
+            <p className="max-w-[600] leading-[130%] text-[2rem]!">
               Tasty, organic and cruelty free certified Candy to respect the
               environment and nature, obtained with energy produced from sources
               renewable
@@ -26,7 +26,7 @@ const FunctionSection = () => {
       </div>
       <div
         ref={ref}
-        className="grid grid-cols-[1fr_1fr_1fr] gap-0 h-[550px] scroll-reveal"
+        className="grid grid-cols-[1fr_1fr_1fr] gap-0 h-[550] scroll-reveal"
       >
         <div className="relative reveal-item stagger-1">
           <Image
