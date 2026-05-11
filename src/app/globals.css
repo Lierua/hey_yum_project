@@ -101,6 +101,43 @@ body {
 .scroll-reveal.visible .stagger-3 {
   transition-delay: 0.3s;
 }
+
+/*----- Parallax -----*/
+.parallaxSection {
+  position: relative;
+  overflow: clip;
+}
+
+.parallaxLayer {
+  position: absolute;
+
+  width: 100%;
+  height: auto;
+  inset: 0;
+  animation: parallaxMove linear;
+  animation-timeline: scroll();
+  will-change: transform;
+}
+
+.speed-slow {
+  --travel: -150px;
+}
+.speed-medium {
+  --travel: -350px;
+}
+.speed-fast {
+  --travel: -600px;
+}
+
+@keyframes parallaxMove {
+  from {
+    transform: translateY(50%);
+  }
+  to {
+    transform: translateY(var(--travel, -100px));
+  }
+}
+
 .title_text {
   font-size: clamp(3.125rem, 2.4038rem + 3.2051vw, 9.25rem);
 }
