@@ -25,15 +25,15 @@ export default async function ProductsPage({ params }: Props) {
 
   console.log("id =", id);
 
-  const response = await fetch(
-    `https://towbvljdqlfyzhysgbtd.supabase.co/rest/v1/products?select=*,product_tags(tags(name))&id=eq.${id}`,
+   const response = await fetch(
+    `https://towbvljdqlfyzhysgbtd.supabase.co/rest/v1/products?select=*,product_tags(tags(name))&id=eq.${id}`, 
     {
-      headers: {
-        apikey: `sb_publishable_hQLCA1gMNkb9AcWu9-IHcA_WylH6nPP`,
-        Authorization: `Bearer sb_publishable_hQLCA1gMNkb9AcWu9-IHcA_WylH6nPP`,
-        "Content-Type": "application/json",
-      },
-    },
+     headers: {
+       apikey: `sb_publishable_hQLCA1gMNkb9AcWu9-IHcA_WylH6nPP`,
+       Authorization: `Bearer sb_publishable_hQLCA1gMNkb9AcWu9-IHcA_WylH6nPP`,
+       "Content-Type": "application/json",
+     },
+   },
   );
 
   console.log(response.status);

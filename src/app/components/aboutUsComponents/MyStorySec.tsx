@@ -5,9 +5,7 @@ import Image from "next/image";
 const MyStorySec = () => {
   return (
     <section className="S_Content_width ">
-
       <div className="col-start-2 grid gap-4 grid-cols-[minmax(0,900px)] justify-center">
-
         <div className="flex justify-center">
           <HeaderOneComp text="My Story" />
         </div>
@@ -22,8 +20,8 @@ const MyStorySec = () => {
               <br />I was looking for different ways to stabilize my son, and organic food ended up working for us. I live just outside Copenhagen, the Danish capitol, where organic food flourishes in multiple spots from small grocery stores to all the major supermarked. That is, until you hit the aisle with sweets…
             </p>
           </TextBox>
-          <div className="w-full h-full pt-4">
-            <Image src="/assets/images/home/HEY-YUM-og-Henriette.png" alt="image" width={550} height={550} className="object-cover object-center" />
+          <div className="w-full h-full relative overflow-hidden pt-4 ">
+            <Image src="/assets/images/home/HEY-YUM-og-Henriette.png" alt="image" fill className="object-cover py-4 top-30 left-[40]" />
           </div>
           <div className="w-[100%] px-4 col-span-2">
             <p>
