@@ -39,9 +39,9 @@ const LinkButton = ({ text, link, color }: Props) => {
             "--btn-anti": `var(${antiColor})`,
           } as React.CSSProperties
         }
-        className="w-[170] font-bold text-center border-3 border-[var(--btn-color)] rounded-full px-4 py-2 
-      text-[var(--btn-color)] transition-all duration-200 
-      hover:bg-[var(--btn-color)] hover:text-[var(--btn-anti)]"
+        className="w-[170] font-bold text-center border-3 border-(--btn-color) rounded-full px-4 py-2 
+      text-(--btn-color) transition-all duration-200 
+      hover:bg-(--btn-color) hover:text-(--btn-anti)"
       >
         {text}
       </div>

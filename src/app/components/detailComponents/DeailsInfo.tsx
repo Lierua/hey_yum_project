@@ -54,14 +54,10 @@ const DetailsInfo = ({ productDetails }: Props) => {
       </div>
       <p className="font-[400]! text-[40px]! uppercase my-8">250 kr</p>
       <BasketCounter />
-      <div className="[&>*]:w-full mt-4">
+      <div className="*:w-full mt-4 mb-8">
         <SubmitButton color="--orange" text="Tilføj til kurv" />
       </div>
-        <Image loading="eager" src={`/assets/images/details/eu-organic-logo-600x400_0-300x200 2.png`} width={300} height={150} alt={"eu-organic-logo"} className=" h-[55] w-[78] rounded-(--std_rounded) ml-auto" />
-      </div>
-      <p>{productDetails.description}</p>
       <IngredientsSec id={productDetails.id} />
-      
     </div>
   );
 };
