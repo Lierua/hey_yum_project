@@ -16,6 +16,7 @@ type ProductResponse = {
   product_tags: {
     tags: {
       name: string;
+      tag_icons: string;
     };
   }[];
 };
@@ -25,8 +26,8 @@ export default async function ProductsPage({ params }: Props) {
 
   console.log("id =", id);
 
-   const response = await fetch(
-    `https://towbvljdqlfyzhysgbtd.supabase.co/rest/v1/products?select=*,product_tags(tags(name))&id=eq.${id}`, 
+  const response = await fetch(
+    `https://towbvljdqlfyzhysgbtd.supabase.co/rest/v1/products?select=*,product_tags(tags(*))&id=eq.${id}`,
     {
      headers: {
        apikey: `sb_publishable_hQLCA1gMNkb9AcWu9-IHcA_WylH6nPP`,
@@ -46,8 +47,8 @@ export default async function ProductsPage({ params }: Props) {
     <div className="grid ">
       <Nav page="products" />
 
-      <div className="ContentWitdh">
-        <div className="grid grid-cols-[2fr_3fr] relative">
+      <div className="ContentWitdh mt-(--mt_std)">
+        <div className="grid gap-[20] grid-cols-[2fr_3fr] relative">
           <DetailsImg productDetails={productDetails} />
           <DetailsInfo productDetails={productDetails} />
         </div>

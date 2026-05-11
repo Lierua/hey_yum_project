@@ -5,8 +5,9 @@ export default function ProductsPage() {
   return (
     <div className="grid">
       <Nav page="products" />
-
-      <ProductsComponent text="Our product" />
+      <div className=" mt-(--mt_std)">
+        <ProductsComponent text="Our product" />
+      </div>
     </div>
   );
 }

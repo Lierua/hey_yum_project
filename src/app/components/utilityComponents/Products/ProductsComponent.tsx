@@ -35,7 +35,7 @@ const ProductsComponent = async ({ text }: Props) => {
   console.log(products);
 
   return (
-    <div className="ContentWitdh ">
+    <div className="ContentWitdh gap-8 ">
       <HeaderOneComp text={text} />
       <div className="gap-4 grid grid-cols-4">
         {products.map((product) => (
@@ -44,12 +44,12 @@ const ProductsComponent = async ({ text }: Props) => {
             href={`/detail/${product.id}?id=${product.id}`}
           >
             <div className="max-w-[400] flex flex-col gap-1">
-              <div className="relative w-full max-h-[500] overflow-hidden">
+              <div className="relative w-full max-h-[500] overflow-hidden grid rounded-(--card_rounded)">
                 <img
                   loading="eager"
                   src={product.card_imgs[0]}
                   alt={product.name}
-                  className="object-cover h-auto w-auto
+                  className="object-cover h-auto w-auto w-auto mx-auto
                    transition-all duration-200 ease-in hover:scale-107"
                 />
               </div>

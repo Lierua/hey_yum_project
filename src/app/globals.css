@@ -14,6 +14,7 @@
 
   --std_rounded: 10px;
   --card_rounded: 25px;
+  --mt_std: 4rem;
 }
 
 @theme inline {
@@ -139,5 +140,35 @@ body {
 }
 
 .title_text {
-  font-size: clamp(3.125rem, 2.4038rem + 3.2051vw, 9.25rem);
+  font-size: clamp(3.125rem, 2.0038rem + 5.2051vw, 12.25rem);
+}
+
+@keyframes slideInRight {
+  from {
+    transform: translate(300px, 200px) rotate(-10deg);
+    opacity: 0;
+  }
+  to {
+    transform: translate(100px, 200px) rotate(-25deg);
+    opacity: 1;
+  }
+}
+
+.animate-pack-in {
+  animation: slideInRight 0.5s ease-out forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.4s ease-out;
 }

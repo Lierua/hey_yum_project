@@ -10,8 +10,8 @@ type Props = {
 
 const DetailsImg = ({ productDetails }: Props) => {
   return (
-    <div className="max-w-[530] flex-col flex gap-[30]">
-      <div className="relative w-full max-h-[750] overflow-hidden">
+    <div className="max-w-[530] flex-col flex gap-[20]">
+      <div className="relative w-full max-h-[750] overflow-hidden rounded-(--card_rounded)">
         <img
           loading="eager"
           src={productDetails.details_imgs[0]}
@@ -19,7 +19,7 @@ const DetailsImg = ({ productDetails }: Props) => {
           className="object-cover h-auto w-auto"
         />
       </div>
-      <div className="relative w-full max-h-[500] overflow-hidden">
+      <div className="relative w-full max-h-[700] overflow-hidden rounded-(--card_rounded)">
         <img
           loading="eager"
           src={productDetails.details_imgs[1]}
@@ -27,21 +27,21 @@ const DetailsImg = ({ productDetails }: Props) => {
           className="object-cover h-auto w-auto"
         />
       </div>
-      <div className="grid grid-cols-2 gap-[30]">
-        <div className="relative w-full max-h-[340] overflow-hidden">
+      <div className="grid grid-cols-2 gap-[20]">
+        <div className="relative w-full h-[340] overflow-hidden rounded-(--card_rounded)">
           <img
             loading="eager"
-            src={productDetails.details_imgs[1]}
+            src={productDetails.details_imgs[2]}
             alt={productDetails.name}
-            className="object-cover h-auto w-auto"
+            className="object-cover h-full w-auto"
           />
         </div>
-        <div className="relative w-full max-h-[340] overflow-hidden">
+        <div className="relative w-full max-h-[340] overflow-hidden rounded-(--card_rounded)">
           <img
             loading="eager"
             src={productDetails.details_imgs[1]}
             alt={productDetails.name}
-            className="object-cover h-auto w-auto"
+            className="object-cover h-full w-auto"
           />
         </div>
       </div>
