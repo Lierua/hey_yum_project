@@ -20,7 +20,7 @@ const Hero = () => {
       color: "--magenta",
       pack: "--green",
       name: "MAGIC GARDEN!",
-      link: "detail/e74da739-c0b6-49da-9abf-a7f074603dc5?id=e74da739-c0b6-49da-9abf-a7f074603dc5",
+      link: "detail/e74da739-c0b6-49da-9abf-a7f074603dc5?id=e74da739 -c0b6-49da-9abf-a7f074603dc5",
     },
     yellow: {
       bgColor: "--blue",
