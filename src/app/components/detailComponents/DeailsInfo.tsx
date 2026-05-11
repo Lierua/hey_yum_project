@@ -1,6 +1,8 @@
 import Image from "next/image";
 import SubmitButton from "../utilityComponents/SubmitButton";
 import BasketCounter from "./BasketCounter";
+import DropDown from "./ingredientsDropDownComps/DropDown";
+import IngredientsSec from "./ingredientsDropDownComps/IngridientsSec";
 
 type ProductResponse = {
   id: string;
@@ -55,6 +57,11 @@ const DetailsInfo = ({ productDetails }: Props) => {
       <div className="[&>*]:w-full mt-4">
         <SubmitButton color="--orange" text="Tilføj til kurv" />
       </div>
+        <Image loading="eager" src={`/assets/images/details/eu-organic-logo-600x400_0-300x200 2.png`} width={300} height={150} alt={"eu-organic-logo"} className=" h-[55] w-[78] rounded-(--std_rounded) ml-auto" />
+      </div>
+      <p>{productDetails.description}</p>
+      <IngredientsSec id={productDetails.id} />
+      
     </div>
   );
 };

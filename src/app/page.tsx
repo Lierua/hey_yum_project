@@ -6,6 +6,7 @@ import ParallaxSecOne from "./components/parallaxComponents/ParallaxSecOne";
 import SocialContent from "./components/homeComponents/Socials/SocialContent";
 import Footer from "./components/utilityComponents/Footer";
 import Passion from "./components/homeComponents/Passion";
+import ParallaxSecTwo from "./components/parallaxComponents/ParallaxSecTwo";
 
 export default function Home() {
   return (
@@ -14,8 +15,8 @@ export default function Home() {
 
       <main className="">
         <Hero />
+        <ParallaxSecTwo />
         <FunctionSection />
-        <ParallaxSecOne />
         <SocialContent />
         <Passion page="home" />
       </main>

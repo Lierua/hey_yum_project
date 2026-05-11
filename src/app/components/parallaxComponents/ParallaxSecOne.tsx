@@ -1,52 +1,23 @@
 "use client";
 
-// import { motion, useScroll, useTransform } from "framer-motion";
-import { useRef } from "react";
 import Image from "next/image";
 
-export function ParallaxSecOne() {
-//   const ref = useRef(null);
-
-//   const { scrollYProgress } = useScroll({
-//     //useScroll hooken retunere "progress" for scroll på target(ref), et tal mellem 0 og 1
-//     target: ref,
-//     offset: ["start end", "end start"],
-//   });
-
-//   // layers
-//   const bgY = useTransform(scrollYProgress, [0, 1], [0, 100]);
-//   const productY = useTransform(scrollYProgress, [0, 1], [0, -150]);
-//   const textY = useTransform(scrollYProgress, [0, 1], [50, -200]);
-  //   const opacity = useTransform(scrollYProgress, [0, 0.3, 1], [0, 1, 0]);
-
+export default function ParallaxSecOne() {
   return (
-    // <div ref={ref} className="h-[500px]">
-    //   <div className="sticky top-0 h-[500] w-full overflow-hidden flex items-center justify-center">
-    //     <motion.div style={{ y: bgY }} className="absolute inset-0  bg-blue-700"></motion.div>
-    //     <motion.div style={{ y: productY }} className="absolute z-20 w-[34rem] h-[38rem] rotate-18 shadow-2xs">
-    //       <Image src="/assets/images/home/trassic-garden.png" alt="product" fill className="object-contain " />
-    //     </motion.div>
-    //     <motion.div className="absolute inset-0 flex items-center justify-center z-10 parallax">
-    //       <h1 className="text-[14rem]! leading-[1.1] text-center text-(--white)">SWEET GOUEY NATTY</h1>
-    //     </motion.div>
-    //   </div>
-    // </div>     
-    <section className="h-[600px] overflow-hidden">
-      <div className="sticky h-[500px] w-full flex items-center justify-center">
-        <div className="absolute inset-0 bg-linear-to-bl from-blue-700 to-blue-300"></div>
-        <div className="absolute inset-0 z-20 parallax w-full flex flex-row justify-around h-fit bg-none px-5 ">
-          <img src="/assets/images/home/star.svg" alt="product" className="w-[150px] aspect-square" />
-          <img src="/assets/images/home/rectangle.svg" alt="product" className="w-[30px]" />
-        </div>
-
-        <Image src="/assets/images/home/trassic-garden.png" alt="product" fill className="w-[100%] object-contain z-10 shadow-xl/30 " />
-
-        <div className="absolute inset-0 flex items-center justify-center z-0 parallax">
-          <h1 className="text-[14rem]! leading-[1.1] text-center text-(--white)">SWEET GOUEY NATTY</h1>
-        </div>
+    <section className="parallaxSection h-[60vh] bg-(--black)">
+      {/*Top layer*/}
+      <div className="parallaxLayer speed-slow z-20 flex w-full justify-around ">
+        <img src="/assets/images/home/star.svg" alt="product" className="w-[150px] aspect-square" />
+        <img src="/assets/images/home/rectangle.svg" alt="product" className="w-[30px]" />
+      </div>
+      {/*Mid layer*/}
+      <div className="parallaxLayer speed-fast  z-10 max-w-[400px] max-h-[100%] mx-auto  ">
+        <Image src="/assets/images/home/trassic-garden.png" alt="product" width={500} height={500} className="w-[100%] object-contain object-center rotate-45" />
+      </div>
+      {/*Bottomlayer*/}
+      <div className="parallaxLayer speed-medium z-0">
+        <h1 className="text-[14rem]! leading-[1.1] text-center text-(--white)">SWEET GOUEY NATTY</h1>
       </div>
     </section>
-  ); 
+  );
 }
-
-export default ParallaxSecOne;

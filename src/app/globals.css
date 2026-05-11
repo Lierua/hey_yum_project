@@ -2,6 +2,7 @@
 
 :root {
   --white: #fdf2e2;
+  --whiteHover: #fdebd1;
   --black: #2a1e1b;
   --black50: rgba(42, 30, 27, 0.5);
   --orange: #ff672d;
@@ -101,6 +102,43 @@ body {
 .scroll-reveal.visible .stagger-3 {
   transition-delay: 0.3s;
 }
+
+/*----- Parallax -----*/
+.parallaxSection {
+  position: relative;
+  overflow: clip;
+}
+
+.parallaxLayer {
+  position: absolute;
+
+  width: 100%;
+  height: auto;
+  inset: 0;
+  animation: parallaxMove linear;
+  animation-timeline: scroll();
+  will-change: transform;
+}
+
+.speed-slow {
+  --travel: -150px;
+}
+.speed-medium {
+  --travel: -350px;
+}
+.speed-fast {
+  --travel: -600px;
+}
+
+@keyframes parallaxMove {
+  from {
+    transform: translateY(50%);
+  }
+  to {
+    transform: translateY(var(--travel, -100px));
+  }
+}
+
 .title_text {
   font-size: clamp(3.125rem, 2.0038rem + 5.2051vw, 12.25rem);
 }
