@@ -19,12 +19,12 @@ const SubmitButton = ({ text, color = "--black" }: Props) => {
   const colorMap: Record<Colors, Colors> = {
     "--black": "--white",
     "--white": "--black",
-    "--orange": "--light_green",
-    "--yellow": "--blue",
-    "--green": "--magenta",
-    "--blue": "--orange",
-    "--light_green": "--orange",
-    "--magenta": "--green",
+    "--orange": "--white",
+    "--yellow": "--white",
+    "--green": "--white",
+    "--blue": "--white",
+    "--light_green": "--white",
+    "--magenta": "--white",
   };
 
   const antiColor = colorMap[color];
@@ -39,7 +39,7 @@ const SubmitButton = ({ text, color = "--black" }: Props) => {
         } as React.CSSProperties
       }
       className="
-      w-[170] font-bold text-center rounded-[5] px-4 py-2 
+      w-[170] font-bold text-center rounded-[5] px-4 
       border-2 h-[40] border-[var(--btn-color)] text-[16px]
       text-[var(--btn-anti)] bg-[var(--btn-color)] transition-all duration-200 
       hover:bg-[var(--btn-anti)] hover:text-[var(--btn-color)] cursor-pointer"
