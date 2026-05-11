@@ -1,6 +1,5 @@
 import Image from "next/image";
 import HeaderOneComp from "../utilityComponents/HeaderOneComp";
-import { section } from "framer-motion/client";
 
 type ItemProps = {
   image: string;
@@ -12,11 +11,13 @@ type ItemProps = {
 };
 
 const AwardsSec = () => {
+
+
   return (
     <section className="S_Content_width">
       <div
-        className="grid grid-rows-[0.2fr_1fr_1fr_1fr] gap-8 mx-auto p-4 col-start-2
-    md:grid-cols-[minmax(0,800px)_minmax(10px,200px)_minmax(0,800px)]  md:[&>*:nth-child(2)]:col-span-2 md:[&>*:nth-child(3)]:col-span-2  md:[&>*:nth-child(3)]:col-start-2 
+
+        className="flex gap-14 p-4 col-start-2 flex-col md:[&>*:nth-child(3)]:ml-[50%] md:[&>*:nth-child(2)]:mr-[50%] md:[&>*:nth-child(4)]:mr-[50%] items-center md:[&>*:nth-child(3)]:col-span-2  md:[&>*:nth-child(3)]:col-start-2 
     md:[&>*:nth-child(4)]:col-span-2"
       >
         <div className="grid col-span-full items-center justify-center w-full">

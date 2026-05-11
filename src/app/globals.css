@@ -2,6 +2,7 @@
 
 :root {
   --white: #fdf2e2;
+  --whiteHover: #fdebd1;
   --black: #2a1e1b;
   --black50: rgba(42, 30, 27, 0.5);
   --orange: #ff672d;
