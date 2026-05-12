@@ -7,6 +7,7 @@ import SocialContent from "./components/homeComponents/Socials/SocialContent";
 import Footer from "./components/utilityComponents/Footer";
 import Passion from "./components/homeComponents/Passion";
 import ParallaxSecTwo from "./components/parallaxComponents/ParallaxSecTwo";
+import ProductsComponent from "./components/utilityComponents/Products/ProductsComponent";
 
 export default function Home() {
   return (
@@ -16,9 +17,19 @@ export default function Home() {
       <main className="">
         <Hero />
         <ParallaxSecTwo />
+        <div className="air w-full h-[140]"></div>
+
         <FunctionSection />
-        <SocialContent />
+        <div className="air w-full h-[140]"></div>
+
+        <ProductsComponent text="Our Products" />
+        <div className="air w-full h-[140]"></div>
+
         <Passion page="home" />
+        <div className="air w-full h-[140]"></div>
+
+        <SocialContent />
+        <div className="air w-full h-[140]"></div>
       </main>
 
       <Footer />
