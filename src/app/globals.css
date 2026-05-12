@@ -172,3 +172,27 @@ body {
 .animate-fade-in {
   animation: fadeIn 0.4s ease-out;
 }
+
+.scroller[data-animated="true"] {
+  overflow: hidden;
+}
+
+.scroller_inner {
+  flex-wrap: wrap;
+}
+
+.scroller[data-animated="true"] .scroller_inner {
+  width: fit-content;
+  animation: scroll 40s var(--animation_direction, forwards) linear infinite;
+  flex-wrap: nowrap;
+}
+
+.scroller[data-direction="right"] {
+  --animation_direction: reverse;
+}
+
+@keyframes scroll {
+  to {
+    transform: translateX(-50%);
+  }
+}
