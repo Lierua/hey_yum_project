@@ -53,8 +53,10 @@ export default async function ProductsPage({ params }: Props) {
           <DetailsInfo productDetails={productDetails} />
         </div>
       </div>
+      <div className="air w-full h-[140]"></div>
 
       <ProductsComponent text="Related Products" />
+      <div className="air w-full h-[140]"></div>
     </div>
   );
 }
