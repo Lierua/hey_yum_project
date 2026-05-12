@@ -37,7 +37,7 @@ const Carousel = ({ direction }: Prop) => {
     <div
       ref={scrollerRef}
       data-direction={direction}
-      className="scroller w-screen"
+      className="scroller w-screen overflow-hidden"
     >
       <div className="border-1 border-(--black) flex scroller_inner">
         <div className="border-1 border-(--black) grid items-center w-[325] h-[190] ">
