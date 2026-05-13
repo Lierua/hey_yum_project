@@ -8,7 +8,7 @@ import Footer from "./components/utilityComponents/Footer";
 import Passion from "./components/homeComponents/Passion";
 import ParallaxSecTwo from "./components/parallaxComponents/ParallaxSecTwo";
 import ProductsComponent from "./components/utilityComponents/Products/ProductsComponent";
-import FlipCardSec from "./components/parallaxComponents/FlipCardSec";
+import Where from "./components/homeComponents/Where/Where";
 
 export default function Home() {
   return (
@@ -31,6 +31,7 @@ export default function Home() {
 
         <SocialContent />
         <div className="air w-full h-[140]"></div>
+        <Where />
       </main>
 
       <Footer />
