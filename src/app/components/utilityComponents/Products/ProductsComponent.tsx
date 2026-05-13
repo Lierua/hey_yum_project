@@ -44,13 +44,22 @@ const ProductsComponent = async ({ text }: Props) => {
             href={`/detail/${product.id}?id=${product.id}`}
           >
             <div className="max-w-[400] flex flex-col gap-1">
-              <div className="relative w-full max-h-[500] overflow-hidden grid rounded-(--card_rounded)">
+              <div className="relative w-full max-h-[500px] overflow-hidden grid rounded-(--card_rounded) group">
+                {/* Base image */}
                 <img
-                  loading="eager"
                   src={product.card_imgs[0]}
                   alt={product.name}
-                  className="object-cover h-auto w-auto w-auto mx-auto
-                   transition-all duration-200 ease-in hover:scale-107"
+                  className="col-1 row-1 object-cover w-full h-full transition-transform duration-1200 ease-out group-hover:scale-110 "
+                />
+
+                {/* Reveal image */}
+                <img
+                  src={product.card_imgs[1]}
+                  alt={product.name}
+                  className="col-1 row-1 object-cover w-full h-full
+                  transition-all duration-1200 ease-[cubic-bezier(0.25,1,0.5,1)]
+                  [clip-path:circle(0%_at_50%_50%)] group-hover:scale-110
+                  group-hover:[clip-path:circle(150%_at_50%_50%)]"
                 />
               </div>
               <h2 className="text-center font-lilita">{product.name}</h2>
