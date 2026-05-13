@@ -106,10 +106,16 @@ body {
 /*----- Parallax -----*/
 
 .img {
-  align-self: stretch;
   width: 100%;
   object-fit: cover;
   animation: parallax linear both;
+  animation-timeline: view();
+  @supports not (animation-timeline: view()) {
+    animation: none;
+  }
+}
+.p_div {
+  animation: p-div-parallax linear both;
   animation-timeline: view();
   @supports not (animation-timeline: view()) {
     animation: none;
@@ -122,6 +128,15 @@ body {
   }
   to {
     object-position: top;
+  }
+}
+
+@keyframes p-div-parallax {
+  from {
+    transform: translateY(100%);
+  }
+  to {
+    transform: translateY(-100%);
   }
 }
 
