@@ -218,7 +218,7 @@ body {
 
 .scroller[data-animated="true"] .scroller_inner {
   width: fit-content;
-  animation: scroll 40s var(--animation_direction, forwards) linear infinite;
+  animation: scroll 70s var(--animation_direction, forwards) linear infinite;
   flex-wrap: nowrap;
 }
 

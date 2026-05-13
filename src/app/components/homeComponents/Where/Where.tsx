@@ -8,7 +8,7 @@ const Where = () => {
         <HeaderOneComp text="Where you might have seen us" />
       </div>
       <Carousel direction="right" />
-      <div className="mt-[-2px]">
+      <div className="mt-[-2]">
         <Carousel direction="" />
       </div>
     </div>

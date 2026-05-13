@@ -46,14 +46,14 @@ const Hero = () => {
         <Herocard {...current} text="See now" />
       </div>
 
-      <div className="bg-(--white) grid grid-rows-3 overflow-hidden">
+      <div className="bg-(--white) grid gap-[100] grid-rows-3 overflow-hidden">
         <Image
           loading="eager"
-          src={`/assets/images/home/title.svg`}
+          src={`/assets/svg/Title_svg.svg`}
           width={900}
           height={224}
           alt={"title card"}
-          className="mx-auto  h-auto w-auto"
+          className="mx-auto h-auto max-h-[300] w-auto self-center mt-16"
         />
         <div className="mt-[40]">
           <div
