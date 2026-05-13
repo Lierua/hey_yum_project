@@ -25,10 +25,19 @@ const Nav = ({ page }: Props) => {
   }, []);
 
   return (
-    <div style={{ opacity: isVisible ? 1 : 0, transition: "opacity 0.4s ease" }} className="grid fixed top-0 left bg-(--white) z-100 border-b-3 border-(--black50) w-full">
+    <div
+      style={{ opacity: isVisible ? 1 : 0, transition: "opacity 0.4s ease" }}
+      className="grid fixed top-0 left bg-(--white) z-100 border-b-3 border-(--black50) w-full"
+    >
       <nav className="flex justify-between h-[60] [&>*]:my-auto mx-4">
         <Link href={"/"}>
-          <Image src="/assets/images/home/Logo.svg" alt="image" width={100} height={100} className="object-center object-cover hover:scale-110 transition-all duration-100 ease-in" />
+          <Image
+            src="/assets/images/home/Logo.svg"
+            alt="image"
+            width={100}
+            height={100}
+            className="object-center w-[120] h-auto object-cover hover:scale-110 transition-all duration-100 ease-in"
+          />
         </Link>
         <div className="w-fit h-full flex gap-6 justify-between items-center">
           <Link href={"/productList"}>
@@ -57,7 +66,13 @@ const Nav = ({ page }: Props) => {
           </Link>
         </div>
         <div className="max-h-[50%] aspect-square">
-          <Image src="/assets/svg/basket.svg" alt="image" width={100} height={100} className="object-center object-cover hover:scale-110 hover:cursor-pointer transition-all duration-100 ease-in" />
+          <Image
+            src="/assets/svg/basket.svg"
+            alt="image"
+            width={100}
+            height={100}
+            className="object-center object-cover hover:scale-110 hover:cursor-pointer transition-all duration-100 ease-in"
+          />
         </div>
       </nav>
     </div>

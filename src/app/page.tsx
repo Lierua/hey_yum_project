@@ -9,6 +9,7 @@ import Passion from "./components/homeComponents/Passion";
 import ParallaxSecTwo from "./components/parallaxComponents/ParallaxSecTwo";
 import ProductsComponent from "./components/utilityComponents/Products/ProductsComponent";
 import Where from "./components/homeComponents/Where/Where";
+import ScrollOpenin from "./components/utilityComponents/ScrollOpenin";
 
 export default function Home() {
   return (
@@ -17,6 +18,7 @@ export default function Home() {
 
       <main className="">
         <Hero />
+        <ScrollOpenin />
         <ParallaxSecTwo />
         <div className="air w-full h-[140]"></div>
 

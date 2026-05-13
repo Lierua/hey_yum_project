@@ -231,3 +231,29 @@ body {
     transform: translateX(-50%);
   }
 }
+
+.Bars {
+  transform-origin: left;
+  animation: Open linear forwards;
+  animation-timeline: view();
+  animation-range: entry 0% exit 100%;
+  scale: 1 1;
+}
+.Bars:nth-child(1) {
+  animation-range: entry 0% exit 0%;
+}
+.Bars:nth-child(2) {
+  animation-range: entry 120% exit 0%;
+}
+.Bars:nth-child(3) {
+  animation-range: entry 180% exit 0%;
+}
+.Bars:nth-child(4) {
+  animation-range: entry 220% exit 0%;
+}
+
+@keyframes Open {
+  to {
+    scale: 0 1;
+  }
+}
