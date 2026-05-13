@@ -8,6 +8,7 @@ import Footer from "./components/utilityComponents/Footer";
 import Passion from "./components/homeComponents/Passion";
 import ParallaxSecTwo from "./components/parallaxComponents/ParallaxSecTwo";
 import ProductsComponent from "./components/utilityComponents/Products/ProductsComponent";
+import FlipCardSec from "./components/parallaxComponents/FlipCardSec";
 
 export default function Home() {
   return (

@@ -104,6 +104,27 @@ body {
 }
 
 /*----- Parallax -----*/
+
+.img {
+  align-self: stretch;
+  width: 100%;
+  object-fit: cover;
+  animation: parallax linear both;
+  animation-timeline: view();
+  @supports not (animation-timeline: view()) {
+    animation: none;
+  }
+}
+
+@keyframes parallax {
+  from {
+    object-position: bottom;
+  }
+  to {
+    object-position: top;
+  }
+}
+
 .parallaxSection {
   position: relative;
   overflow: clip;
@@ -127,12 +148,12 @@ body {
   --travel: -350px;
 }
 .speed-fast {
-  --travel: -600px;
+  --travel: -900px;
 }
 
 @keyframes parallaxMove {
   from {
-    transform: translateY(50%);
+    transform: translateY(0);
   }
   to {
     transform: translateY(var(--travel, -100px));

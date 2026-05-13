@@ -15,7 +15,7 @@ export default function ParallaxSecOne() {
         <Image src="/assets/images/home/trassic-garden.png" alt="product" width={500} height={500} className="w-[100%] object-contain object-center rotate-45" />
       </div>
       {/*Bottomlayer*/}
-      <div className="parallaxLayer speed-medium z-0">
+      <div className="z-0">
         <h1 className="text-[14rem]! leading-[1.1] text-center text-(--white)">SWEET GOUEY NATTY</h1>
       </div>
     </section>
