@@ -3,6 +3,8 @@ import Manifesto from "@/app/components/aboutUsComponents/Manifesto";
 import MyStorySec from "@/app/components/aboutUsComponents/MyStorySec";
 import QualitySec from "@/app/components/aboutUsComponents/QualitySec";
 import Passion from "@/app/components/homeComponents/Passion";
+import ParallaxSecOne from "@/app/components/parallaxComponents/ParallaxSecOne";
+import ParallaxSecTwo from "@/app/components/parallaxComponents/ParallaxSecTwo";
 import Nav from "@/app/components/utilityComponents/Header/Nav";
 
 export default function Aboutus() {
