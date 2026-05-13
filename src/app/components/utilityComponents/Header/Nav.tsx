@@ -1,4 +1,7 @@
+"use client";
 import Link from "next/link";
+import Image from "next/image";
+import { useState, useEffect } from "react";
 
 type Page = "home" | "products" | "aboutUs" | "contact";
 
@@ -7,41 +10,55 @@ type Props = {
 };
 
 const Nav = ({ page }: Props) => {
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 0) {
+        setIsVisible(true);
+        window.removeEventListener("scroll", handleScroll); //efter visible for førstegange, fjernede event listener
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
-    <div className="grid  border-b-3 border-(--black50) w-full">
-      <nav className="flex gap-[20] mx-auto sticky h-[60] [&>*]:my-auto">
+    <div style={{ opacity: isVisible ? 1 : 0, transition: "opacity 0.4s ease" }} className="grid fixed top-0 left bg-(--white) z-100 border-b-3 border-(--black50) w-full">
+      <nav className="flex justify-between h-[60] [&>*]:my-auto mx-4">
         <Link href={"/"}>
-          <p
-            className={` hover:scale-110 transition-all duration-100 ease-in
-            ${page === "home" && "font-semibold"} `}
-          >
-            Home
-          </p>
+          <Image src="/assets/images/home/Logo.svg" alt="image" width={100} height={100} className="object-center object-cover hover:scale-110 transition-all duration-100 ease-in" />
         </Link>
-        <Link href={"/productList"}>
-          <p
-            className={` hover:scale-110 transition-all duration-100 ease-in
+        <div className="w-fit h-full flex gap-6 justify-between items-center">
+          <Link href={"/productList"}>
+            <p
+              className={` hover:scale-110 transition-all duration-100 ease-in
             ${page === "products" && "font-semibold"} `}
-          >
-            Products
-          </p>
-        </Link>
-        <Link href={"/aboutUs"}>
-          <p
-            className={` hover:scale-110 transition-all duration-100 ease-in
+            >
+              Products
+            </p>
+          </Link>
+          <Link href={"/aboutUs"}>
+            <p
+              className={` hover:scale-110 transition-all duration-100 ease-in
             ${page === "aboutUs" && "font-semibold"} `}
-          >
-            About us
-          </p>
-        </Link>
-        <Link href={"/contact"}>
-          <p
-            className={` hover:scale-110 transition-all duration-100 ease-in
+            >
+              About us
+            </p>
+          </Link>
+          <Link href={"/contact"}>
+            <p
+              className={` hover:scale-110 transition-all duration-100 ease-in
             ${page === "contact" && "font-semibold"} `}
-          >
-            Contact
-          </p>
-        </Link>
+            >
+              Contact
+            </p>
+          </Link>
+        </div>
+        <div className="max-h-[50%] aspect-square">
+          <Image src="/assets/svg/basket.svg" alt="image" width={100} height={100} className="object-center object-cover hover:scale-110 hover:cursor-pointer transition-all duration-100 ease-in" />
+        </div>
       </nav>
     </div>
   );
