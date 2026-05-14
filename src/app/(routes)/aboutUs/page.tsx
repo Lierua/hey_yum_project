@@ -10,14 +10,15 @@ import Nav from "@/app/components/utilityComponents/Header/Nav";
 
 export default function Aboutus() {
   return (
-    <div className="grid gap-16">
+    <div className="grid gap-16 h-fit">
       <Nav page="aboutUs" />
       <Passion page="" />
-      <FlipCardSec/>
+      <FlipCardSec />
       <AwardsSec />
       <Manifesto />
       <QualitySec />
       <MyStorySec />
+      <div className="h-[1000]"></div>
     </div>
   );
 }

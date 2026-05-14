@@ -27,9 +27,9 @@ const Nav = ({ page }: Props) => {
   return (
     <div
       style={{ opacity: isVisible ? 1 : 0, transition: "opacity 0.4s ease" }}
-      className="grid fixed top-0 left bg-(--white) z-100 border-b-3 border-(--black50) w-full"
+      className="grid fixed top-0 left bg-(--white) z-100 border-b-3 border-(--black) w-full ContentWitdh"
     >
-      <nav className="flex justify-between h-[60] [&>*]:my-auto mx-4">
+      <nav className="flex justify-between h-[60] *:my-auto">
         <Link href={"/"}>
           <Image
             src="/assets/images/home/Logo.svg"

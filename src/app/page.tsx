@@ -35,8 +35,6 @@ export default function Home() {
         <div className="air w-full h-[140]"></div>
         <Where />
       </main>
-
-      <Footer />
     </div>
   );
 }

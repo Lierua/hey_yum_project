@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Plus_Jakarta_Sans, Lilita_One } from "next/font/google";
 import "./globals.css";
+import Footer from "./components/utilityComponents/Footer";
 
 const plusJakarta = Plus_Jakarta_Sans({
   variable: "--font-plus-jakarta",
@@ -29,7 +30,11 @@ export default function RootLayout({
       lang="en"
       className={`${plusJakarta.variable} ${lilitaOne.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col">{children}</body>
+      <body className="min-h-full flex flex-col">
+        {children}
+
+        <Footer />
+      </body>
     </html>
   );
 }

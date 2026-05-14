@@ -12,7 +12,7 @@ type Props = {
 
 const DetailsImg = ({ productDetails }: Props) => {
   return (
-    <div className="max-w-[530] flex-col flex gap-[20]">
+    <div className="max-w-[530] flex-col flex gap-[20] pt-[6rem]">
       <div className="relative w-full max-h-[750px] overflow-hidden grid rounded-(--card_rounded) group">
         {/* Base image */}
         <img
