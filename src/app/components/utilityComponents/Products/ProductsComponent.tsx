@@ -62,12 +62,12 @@ const ProductsComponent = async ({ text }: Props) => {
                   group-hover:[clip-path:circle(150%_at_50%_50%)]"
                 />
               </div>
-              <h2 className="text-center font-lilita">{product.name}</h2>
+              <h2 className="text-center font-lilita">{product.name}, 1kg</h2>
 
               <div className="flex gap-2 mx-auto">
                 {product.product_tags.map((tag, index) => (
                   <span className="text-[12px]" key={tag.tags.name}>
-                    {tag.tags.name}{" "}
+                    {tag.tags.name}
                     {index !== product.product_tags.length - 1 && (
                       <span>/</span>
                     )}

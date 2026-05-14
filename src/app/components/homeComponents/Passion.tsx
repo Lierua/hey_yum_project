@@ -12,7 +12,7 @@ const Passion = ({ page }: { page: string }) => {
       <div className="flex flex-col md:grid md:grid-cols-[2fr_3fr]">
         <div className="flex flex-col md:order-2">
           <div className="order-2 md:order-0 md:mx-auto">
-            <TextBox tagheader="Overheader" header="Hey Yum! Only the good">
+            <TextBox tagheader="Passion" header="Hey Yum! Only the good">
               <div className="grid ">
                 <div className=" flex flex-col gap-6 my-4">
                   <p>
